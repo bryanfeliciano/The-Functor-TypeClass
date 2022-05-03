@@ -53,3 +53,8 @@ partsDB = Map.fromList keyVals
         vals = [leftArm,rightArm,robotHead]
         keyVals = zip keys vals
 
+partVal :: Maybe RobotPart
+partVal = Map.lookup 1 partsDB
+
+partHtml :: Maybe Html
+partHtml = renderHtml <$> partVal
